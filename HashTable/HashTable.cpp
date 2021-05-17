@@ -76,6 +76,7 @@ public:
 		if (it != a[key].end())
 			a[key].erase(it);
 	}
+	//TODO: Destructor
 };
 
 int main()
@@ -85,14 +86,14 @@ int main()
 	Table<string> tab =  Table<string>(10);
 	
 	tab.Add("256");
-	tab.Add("12e3");
+	tab.Add("12eh3");
 	tab.Add("157");
-	tab.Add("22");
+	tab.Add("stroka");
 
 	tab.ShowTable();
 
-	cout << ((tab.Find("157") == 1) ? "Found\n" : "Not found\n");
-	cout << ((tab.Find("12") == 1) ? "Found\n" : "Not found\n");
+	cout << "157 " << ((tab.Find("157") == 1) ? "Found\n" : "Not found\n");
+	cout << "12 " << ((tab.Find("12") == 1) ? "Found\n" : "Not found\n");
 
 
 	tab.Delete("256");
